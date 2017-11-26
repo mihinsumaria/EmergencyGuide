@@ -1,0 +1,24 @@
+
+I attached a concept I would like to propose you work on..
+ 
+Please do not worry about the header, breadcrumbs, page title, box ("To report any emergency…”) elements.
+ 
+I am looking for you to build the main DIV container with the. It is composed of 12 large button elements (i.e.: REPORTING EMERGENCIES).
+ 
+If you would like, you can leverage a framework (Foundation but Bootstrap is similar) which would enable you to leverage pre-existing functionalities/effects like the hovers and accordion effect, but feel free to code it with Js.
+ 
+You also do not have to worry about the colors of the buttons, or font styles, black and gray will work, arial as the font family is fine.
+ 
+Finally, you do have to worry about the copy represented in the PDF, you can use dummy copy.
+ 
+The blocks have effects: on hover or click, their state changes. 
+When one of 4 buttons in any of the 3 rows is clicked, the state of the block changes and text related to the block is revealed.
+ 
+The page should be responsive, feel free to come up with a layout that works for mobile phones and tablets, it doesn’t have to be perfect, we just want to get a feel for how you would proceed with this in the code base.
+ 
+If you could give us access to a preview of code by December 8, we’ll review your approach, coding best practices and get back to you the following week.
+ 
+Please let me know if you have questions or concerns.
+ 
+Thanks,
+Damien
