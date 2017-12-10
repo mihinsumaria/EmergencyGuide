@@ -8,73 +8,153 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	function accordion(){
+  		if(document.getElementById('acc').style.display=='none')
+  		{
+	  		document.getElementById('acc').style.display='block';
+	  		document.getElementById('acc1').innerHTML='First element stuff here';
+	  	}
+	  	else
+	  	{
+	  		document.getElementById('acc').style.display='none';
+	  	}
+  	}
+  </script>
 </head>
 <style>
 	.container.main
 	{
 		margin-top: 50px;
 	}
+
+	.col-sm-3		
+	{
+		color: white;
+		text-align: center;
+	}
+
+	.col-sm-12
+	{
+		background-color: black;
+	}
+	#acc
+	{
+		border: 2px solid grey;
+		border-radius: 5px;
+		padding: 5px;
+		margin-left: -10px;
+	}
+
+	div.col-sm-12 > p
+	{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	#acc1
+	{
+		margin-top: 10px;
+	}
+
 </style>
 <body>
 	<div class="container main">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<a href="javascript:;" onclick="accordion();">
+						<div class="col-sm-12">
+							<p>Element here</p>
+						</div>
+					</a>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 			</div>
+			
 			<div class="row">
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
+			</div>
+			<div class="row" id="acc" style="display: none;">
+				<p id="acc1"></p>
 			</div>
 		</div>
 
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 				<div class="col-sm-3">
-					<p>Element here</p>
+					<div class="col-sm-12">
+						<p>Element here</p>
+					</div>
 				</div>
 			</div>
 		</div>
