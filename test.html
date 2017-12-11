@@ -9,23 +9,48 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
   <script type="text/javascript">
-  	var current='###';
+  	var current1='###';
+  	var current2='###';
   	function accordion(i,j,k){
+  		/*#007bff*/
   		if(document.getElementById('acc'+k).style.display=='none')
   		{
+  			document.getElementById('el'+i+j+k).style.backgroundColor="#007bff";
+  			document.getElementById('el'+i+j+k).color="white";
 	  		document.getElementById('acc'+k).style.display='block';
 	  		document.getElementById('acc'+k+'p').innerHTML='Element stuff here '+i+j+k;
-	  		current=""+i+j+k;
+	  		if(k==1){
+	  			current1=""+i+j+k;
+	  		}
+	  		else{
+	  			current2=""+i+j+k;
+	  		}
 	  	}
 	  	else
 	  	{
+	  		var current;
+	  		if(k==1){
+	  			current=current1;
+	  		}
+	  		else{
+	  			current=current2;
+	  		}
+	  		document.getElementById("el"+current).style.backgroundColor="black";
+	  		document.getElementById("el"+current).style.color="white";
 	  		document.getElementById('acc'+k).style.display='none';
 	  		if (current==""+i+j+k) {
 	  			return;
 	  		}
+	  		document.getElementById('el'+i+j+k).style.backgroundColor="#007bff";
+  			document.getElementById('el'+i+j+k).color="white";
 	  		document.getElementById('acc'+k+'p').innerHTML='Element stuff here '+i+j+k;	
 	  		document.getElementById('acc'+k).style.display='block';
-	  		current=""+i+j+k;
+	  		if(k==1){
+	  			current1=""+i+j+k;
+	  		}
+	  		else{
+	  			current2=""+i+j+k;
+	  		}
 	  	}
   	}
   </script>
@@ -65,6 +90,11 @@
 		margin-top: 10px;
 	}
 
+	.col-sm-3 > a
+	{
+		color: white;
+	}
+
 </style>
 <body>
 	<div class="container main">
@@ -74,7 +104,7 @@
 				for (var j = 0; j <4; j++) {
 					document.writeln("<div class=\"col-sm-3\">");
 					document.writeln("<a href=\"javascript:;\" onclick=\"accordion("+i+","+j+",1);\">");
-					document.writeln("<div class=\"col-sm-12\">");
+					document.writeln("<div class=\"col-sm-12\" id=\"el"+i+j+1+"\">");
 					document.writeln("<p>Element here</p>");
 					document.writeln("</div>");
 					document.writeln("</a>")
@@ -92,7 +122,7 @@
 				for (var j = 0; j <4; j++) {
 					document.writeln("<div class=\"col-sm-3\">");
 					document.writeln("<a href=\"javascript:;\" onclick=\"accordion("+i+","+j+",2);\">");
-					document.writeln("<div class=\"col-sm-12\">");
+					document.writeln("<div class=\"col-sm-12\" id=\"el"+i+j+2+"\">");
 					document.writeln("<p>Element here</p>");
 					document.writeln("</div>");
 					document.writeln("</a>")
