@@ -12,10 +12,10 @@
   	var current1='###';
   	var current2='###';
   	function accordion(i,j,k){
-  		/*#007bff*/
+  		/*#ac2a38*/
   		if(document.getElementById('acc'+k).style.display=='none')
   		{
-  			document.getElementById('el'+i+j+k).style.backgroundColor="#007bff";
+  			document.getElementById('el'+i+j+k).style.backgroundColor="#ac2a38";
   			document.getElementById('el'+i+j+k).color="white";
 	  		document.getElementById('acc'+k).style.display='block';
 	  		document.getElementById('acc'+k+'p').innerHTML='Element stuff here '+i+j+k;
@@ -41,7 +41,7 @@
 	  		if (current==""+i+j+k) {
 	  			return;
 	  		}
-	  		document.getElementById('el'+i+j+k).style.backgroundColor="#007bff";
+	  		document.getElementById('el'+i+j+k).style.backgroundColor="#ac2a38";
   			document.getElementById('el'+i+j+k).color="white";
 	  		document.getElementById('acc'+k+'p').innerHTML='Element stuff here '+i+j+k;	
 	  		document.getElementById('acc'+k).style.display='block';
@@ -71,6 +71,11 @@
 	{
 		background-color: black;
 	}
+
+	div.col-sm-12:hover
+	{
+		background-color: #ac2a38;
+	}
 	#acc1, #acc2
 	{
 		border: 2px solid grey;
@@ -94,6 +99,7 @@
 	{
 		color: white;
 	}
+
 
 </style>
 <body>

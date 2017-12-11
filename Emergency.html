@@ -13,7 +13,7 @@
   		if(document.getElementById('acc').style.display=='none')
   		{
 	  		document.getElementById('acc').style.display='block';
-	  		document.getElementById('acc1').innerHTML='First element stuff here';
+	  		document.getElementById('acc').innerHTML=document.getElementById('content').innerHTML;
 	  	}
 	  	else
 	  	{
@@ -153,5 +153,12 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div id="content" style="display: none;">
+		<ul>
+			<li>Evacuate if possible</li>
+			<li>Hide out</li>
+			<li>Take action</li>
+		</ul>
 	</div>
 </body>
