@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Emergency Guide</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	function accordion(i,j,k){
+  		current='###';
+  		if(document.getElementById('acc'+k).style.display=='none')
+  		{
+	  		document.getElementById('acc'+k).style.display='block';
+	  		document.getElementById('acc'+k+'p').innerHTML='Element stuff here '+i+j+k;
+	  		current=""+i+j+k;
+	  	}
+	  	else
+	  	{
+	  		document.getElementById('acc'+k).style.display='none';
+	  		if (current==""+i+j+k) {
+	  			return;
+	  		}
+	  		document.getElementById('acc'+k+'p').innerHTML='Element stuff here '+i+j+k;	
+	  		document.getElementById('acc'+k+'p').style.display='block';
+	  	}
+  	}
+  </script>
+</head>
+<style>
+	.container.main
+	{
+		margin-top: 50px;
+	}
+
+	.col-sm-3		
+	{
+		color: white;
+		text-align: center;
+	}
+
+	.col-sm-12
+	{
+		background-color: black;
+	}
+	#acc1, #acc2
+	{
+		border: 2px solid grey;
+		border-radius: 5px;
+		padding: 5px;
+		margin-left: -10px;
+		margin-bottom: 10px;
+	}
+
+	div.col-sm-12 > p
+	{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	#acc1p,#acc2p
+	{
+		margin-top: 10px;
+	}
+
+</style>
+<body>
+	<div class="container main">
+		<script type="text/javascript">
+			for (var i=0; i<2; i++) {
+				document.writeln("<div class=\"row\">");
+				for (var j = 0; j <4; j++) {
+					document.writeln("<div class=\"col-sm-3\">");
+					document.writeln("<a href=\"javascript:;\" onclick=\"accordion("+i+","+j+",1);\">");
+					document.writeln("<div class=\"col-sm-12\">");
+					document.writeln("<p>Element here</p>");
+					document.writeln("</div>");
+					document.writeln("</a>")
+					document.writeln("</div>");
+					}
+					document.writeln("</div>");	
+				}
+		</script>
+		<div class="row accordion" id="acc1" style="display: none;">
+			<p id="acc1p"></p>
+		</div>
+		<script type="text/javascript">
+			for (var i=0; i<2; i++) {
+				document.writeln("<div class=\"row\">");
+				for (var j = 0; j <4; j++) {
+					document.writeln("<div class=\"col-sm-3\">");
+					document.writeln("<a href=\"javascript:;\" onclick=\"accordion("+i+","+j+",2);\">");
+					document.writeln("<div class=\"col-sm-12\">");
+					document.writeln("<p>Element here</p>");
+					document.writeln("</div>");
+					document.writeln("</a>")
+					document.writeln("</div>");
+					}
+					document.writeln("</div>");	
+				}
+		</script>
+		<div class="row accordion" id="acc2" style="display: none;">
+			<p id="acc2p"></p>
+		</div>
+	</div>
+</body>
