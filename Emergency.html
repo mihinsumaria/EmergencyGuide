@@ -1,164 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Emergency Guide</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-  <script type="text/javascript">
-  	function accordion(){
-  		if(document.getElementById('acc').style.display=='none')
-  		{
-	  		document.getElementById('acc').style.display='block';
-	  		document.getElementById('acc').innerHTML=document.getElementById('content').innerHTML;
-	  	}
-	  	else
-	  	{
-	  		document.getElementById('acc').style.display='none';
-	  	}
-  	}
-  </script>
+	<title>Emergency Final</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 </head>
-<style>
-	.container.main
-	{
-		margin-top: 50px;
-	}
-
-	.col-sm-3		
-	{
+<style type="text/css">
+	.col-sm-12 {
+		background-color: black;
 		color: white;
 		text-align: center;
+		padding: 30px 0px;
 	}
-
-	.col-sm-12
-	{
-		background-color: black;
+	.col-sm-12.open {
+		background-color: #ac2a38;
 	}
-	#acc
-	{
-		border: 2px solid grey;
-		border-radius: 5px;
+	.col-sm-3 {
 		padding: 5px;
-		margin-left: -10px;
 	}
-
-	div.col-sm-12 > p
-	{
-		padding-top: 20px;
-		padding-bottom: 20px;
+	.col-sm-12:hover {
+		background-color: #ac2a38;	
 	}
-	#acc1
-	{
-		margin-top: 10px;
+	.accHeader {
+		color: #ac2a38;
+		font-family: "Times New Roman",Times,serif; 
 	}
-
 </style>
 <body>
-	<div class="container main">
-		<div class="row">
-			<div class="col-sm-3">
-				<a href="javascript:;" onclick="accordion();">
-					<div class="col-sm-12">
-						<p>Element here</p>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
+
+	<div class="container" style="display: none;">
+		<div class="acc">
+			<h2 class="accHeader">Emergency Contacts and Resources</h2>
+			<div class="accContent">
+				<p>To report any emergency or suspicious activity, call Campus Police immediately.</p>
+				<p>Off-Campus: Call 508-831-5555</p>
+				<p>On-Campus: Call 5555</p>
+				<hr>
 			</div>
 		</div>
-		
-		<div class="row">
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
+		<div class="acc">
+			<h2 class="accHeader">Reporting Emergencies</h2>
+			<div class="accContent">
+				<h4>To report an emergency situation on the WPI Campus, immediately implement the following steps:</h4>
+				<br>
+				<ul>
+					<li>Call WPI Police immediately at 508-831-5555 or Campus phone extension 5555</li>
+					<li>If phones are down, find transportation or send a runner to notify WPI Police, located at Founders Hall, 26 Boynton Street (lower level).</li>
+					<li>Give your name, location, and emergency</li>
+					<li>Inform WPI Police if you need an ambulance</li>
+					<li>Always stay calm</li>
+				</ul>
+				<hr>
 			</div>
 		</div>
-		<div class="row" id="acc" style="display: none;">
-			<p id="acc1"></p>
+		<div class="acc">
+			<h2 class="accHeader">Active Shooter</h2>
+			<div class="accContent">
+				<h4>Evacuate if possible:</h4>
+				<ul>
+					<li>Have an escape route in mind</li>
+					<li>Leave your belongings behind</li>
+					<li>Keep your hands visible to the responding police officers</li>
+				</ul>
+				<br>
+				<h4>Hide Out:</h4>
+				<ul>
+					<li>Hide in an area out of the active shooter's view</li>
+					<li>Block entry to your hiding place and lock doors</li>
+					<li>Silence cell phones</li>
+				</ul>
+				<br>
+				<h4>Take Action:</h4>
+				<ul>
+					<li>Only when your life is in imminent danger</li>
+					<li>Attempt to incapacitate the shooter</li>
+					<li>Act with physical aggression. Throw items at the shooter if possible</li>
+				</ul>
+				<hr>
+			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
-			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
+		<div class="acc">
+			<h2 class="accHeader">Hostage Situation</h2>
+			<div class="accContent">
+				<h4>Hostage content</h4>
+				<hr>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
+		<div class="acc">
+			<h2 class="accHeader">Lockdown</h2>
+			<div class="accContent">
+				<h4>Lockdown content</h4>
+				<hr>
 			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
+		</div>
+		<div class="acc">
+			<h2 class="accHeader">Shelter-in-place</h2>
+			<div class="accContent">
+				<h4>Shelter content</h4>
+				<hr>
 			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
+		</div>
+		<div class="acc">
+			<h2 class="accHeader">Fire</h2>
+			<div class="accContent">
+				<h4>Fire content</h4>
+				<hr>
 			</div>
-			<div class="col-sm-3">
-				<div class="col-sm-12">
-					<p>Element here</p>
-				</div>
+		</div>
+		<div class="acc">
+			<h2 class="accHeader">Fire Evacuation</h2>
+			<div class="accContent">
+				<h4>Evacuation content</h4>
+				<hr>
+			</div>
+		</div>
+		<div class="acc">
+			<h2 class="accHeader">Bomb Threat</h2>
+			<div class="accContent">
+				<h4>Threat content</h4>
+				<hr>
+			</div>
+		</div>
+		<div class="acc">
+			<h2 class="accHeader">Suspicious Package</h2>
+			<div class="accContent">
+				<h4>Package contents?</h4>
+				<hr>
+			</div>
+		</div>
+		<div class="acc">
+			<h2 class="accHeader">Student in distress</h2>
+			<div class="accContent">
+				<h4>Chill bro</h4>
+				<hr>
+			</div>
+		</div>
+		<div class="acc">
+			<h2 class="accHeader">Medical Emergency</h2>
+			<div class="accContent">
+				<h4>Health content</h4>
+				<hr>
+			</div>
+		</div>
+		<div class="acc">
+			<h2 class="accHeader">Test</h2>
+			<div class="accContent">
+				<h4>Test content</h4>
+				<hr>
+			</div>
+		</div>
+		<div class="acc">
+			<h2 class="accHeader">Research</h2>
+			<div class="accContent">
+				<h4>Research Content</h4>
+				<hr>
 			</div>
 		</div>
 	</div>
-	<div id="content" style="display: none;">
-		<ul>
-			<li>Evacuate if possible</li>
-			<li>Hide out</li>
-			<li>Take action</li>
-		</ul>
+	<div class="container-fluid" id="accordionWrapper">
+		<script type="text/javascript">
+			function calculateRows() {
+				var accs=document.getElementsByClassName("acc");
+				rows=Math.floor(accs.length/4);
+				extra=accs.length%4;
+				return [rows,extra];
+			}
+			function toggleItem(event) {
+				var contents=document.getElementsByClassName("accContent");
+				var collapsibles=document.getElementsByClassName("collapsible");
+				var accs=document.getElementsByClassName("acc");
+				for (var k = 0; k < collapsibles.length; k++) {
+					collapsibles[k].style.display="none";
+				}
+				var elements=document.getElementsByClassName("col-sm-12");
+				for (var k = 0; k < elements.length; k++) {
+					if(!(event.target===elements[k])) {
+						elements[k].className="col-sm-12";
+				}
+				}
+				var currentID=Number(event.target.id.substring(7));
+				var currentClass=event.target.className;
+				var currentCollapsibleID;
+				if(currentID%4==0){
+					currentCollapsibleID=(currentID/4)+1;
+				}
+				else {
+					currentCollapsibleID=Math.ceil(currentID/4);
+				}
+				var currentCollapsible=document.getElementById("Collapsible"+String(currentCollapsibleID));
+				if(currentClass.search("open")==-1){
+					currentCollapsible.style.display="block";
+					currentCollapsible.innerHTML=accs[currentID].innerHTML;
+					currentCollapsible.style.padding="20px";
+					event.target.className=event.target.className+" open";
+				}
+				else{
+					event.target.className=currentClass.substring(0,currentClass.search("open")-1);
+				}
+			}
+			function accordion() {
+				var dimensions=calculateRows();
+				var accordionWrapper=document.getElementById("accordionWrapper");
+				document.body.appendChild(accordionWrapper);
+				var headers=document.getElementsByClassName("accHeader");
+				for (var i = 0; i < dimensions[0]; i++) {
+					var row=document.createElement("div");
+					row.className="row";
+					accordionWrapper.appendChild(row);
+					var collapsible=document.createElement("div");
+					collapsible.className="row collapsible";
+					collapsible.id=String("Collapsible"+String(i+1))
+					collapsible.style.display="block";
+					accordionWrapper.appendChild(collapsible);
+					for (var j = 0; j < 4; j++) {
+						var elementWrapper=document.createElement("div");
+						elementWrapper.className="col-sm-3";
+						row.appendChild(elementWrapper);
+						var element=document.createElement("div");
+						element.className="col-sm-12";
+						element.id="Element"+String(i*4+j);
+						elementWrapper.appendChild(element);
+						var header=document.createTextNode(headers[(i*4)+j].innerHTML.toUpperCase());
+						element.appendChild(header);
+						element.style.fontWeight="bold";
+						element.addEventListener('click',toggleItem, false);
+					}
+				}
+				if (dimensions[1]>0) {
+					var row=document.createElement("div");
+					row.className="row";
+					accordionWrapper.appendChild(row);
+					var collapsible=document.createElement("div");
+					collapsible.className="row collapsible";
+					collapsible.id="Collapsible"+String(dimensions[0]+1)
+					collapsible.style.display="block";
+					accordionWrapper.appendChild(collapsible);
+					for (var i = 0; i < dimensions[1]; i++) {
+						var elementWrapper=document.createElement("div");
+						elementWrapper.className="col-sm-3";
+						row.appendChild(elementWrapper);
+						var element=document.createElement("div");
+						element.className="col-sm-12";
+						element.id="Element"+String(dimensions[0]*4+i)
+						elementWrapper.appendChild(element);
+						var header=document.createTextNode(headers[(dimensions[0]*4)+i].innerHTML.toUpperCase());
+						element.appendChild(header);
+						element.style.fontWeight="bold";
+						element.addEventListener('click',toggleItem, false);
+					}
+				}
+			}
+			
+			accordion()
+		</script>
 	</div>
 </body>
+</html>
