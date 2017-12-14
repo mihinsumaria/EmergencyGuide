@@ -10,28 +10,29 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 </head>
 <style type="text/css">
-	.col-sm-12 {
+	.col-sm-12 { /* accordion elements */
 		background-color: black;
 		color: white;
 		text-align: center;
 		padding: 30px 0px;
 	}
-	.col-sm-12.open {
+	.col-sm-12.open { /* highlight active accordion element */
 		background-color: #ac2a38;
 	}
-	.col-sm-3 {
+	.col-sm-3 { /* padding for accordion header */
 		padding: 5px;
 	}
-	.col-sm-12:hover {
+	.col-sm-12:hover { /* hover effect for accordion element */
 		background-color: #ac2a38;	
 	}
-	.accHeader {
+	.accHeader { /* styling for in-content headers */
 		color: #ac2a38;
 		font-family: "Times New Roman",Times,serif; 
 	}
 </style>
 <body>
-
+	<!--Add new elements in the container below, with the tag div, class acc, provide header and content as shown below-->
+	<!--Please find the corresponding JS code at the bottom of the file-->
 	<div class="container" style="display: none;">
 		<div class="acc">
 			<h2 class="accHeader">Emergency Contacts and Resources</h2>
@@ -266,6 +267,8 @@
 				<hr>
 			</div>
 		</div>
+		<!--Test content to show that the accordion adjusts itself on addition and removal of elements-->
+		<!--Feel free to add more accordion elements-->
 		<div class="acc">
 			<h2 class="accHeader">Test</h2>
 			<div class="accContent">
@@ -283,75 +286,76 @@
 	</div>
 	<div class="container-fluid" id="accordionWrapper">
 		<script type="text/javascript">
+
+			//Find number of rows required to display all elements, along with the extra leftover elements Eg. (Test, Test1) in the above code.
 			function calculateRows() {
 				var accs=document.getElementsByClassName("acc");
 				rows=Math.floor(accs.length/4);
-				extra=accs.length%4;
+				extra=accs.length%4; //4 because we are assuming 4 elements in a row. Currently only 4 elements per row are supported.
 				return [rows,extra];
 			}
-			function toggleItem(event) {
+			function toggleItem(event) { //Toggle corresponding collapsible for an element that is clicked on
 				var contents=document.getElementsByClassName("accContent");
 				var collapsibles=document.getElementsByClassName("collapsible");
 				var accs=document.getElementsByClassName("acc");
-				for (var k = 0; k < collapsibles.length; k++) {
+				for (var k = 0; k < collapsibles.length; k++) { //Collapse all collapsibles
 					collapsibles[k].style.display="none";
 				}
 				var elements=document.getElementsByClassName("col-sm-12");
-				for (var k = 0; k < elements.length; k++) {
-					if(!(event.target===elements[k])) {
+				for (var k = 0; k < elements.length; k++) { //Change class name to remove open
+					if(!(event.target===elements[k])) { //To take into account the case when the active element is toggled again, to collapse the currently open collapsible
 						elements[k].className="col-sm-12";
 				}
 				}
 				var currentID=Number(event.target.id.substring(7));
 				var currentClass=event.target.className;
 				var currentCollapsibleID;
-				if(currentID%4==0){
+				if(currentID%4==0){ //For rows
 					currentCollapsibleID=(currentID/4)+1;
 				}
-				else {
+				else { //For extras
 					currentCollapsibleID=Math.ceil(currentID/4);
 				}
 				var currentCollapsible=document.getElementById("Collapsible"+String(currentCollapsibleID));
-				if(currentClass.search("open")==-1){
+				if(currentClass.search("open")==-1){ //Open corresponding collapsible if the current element is not already open
 					currentCollapsible.style.display="block";
 					currentCollapsible.innerHTML=accs[currentID].innerHTML;
 					currentCollapsible.style.padding="20px";
 					event.target.className=event.target.className+" open";
-					currentCollapsible.focus();
 				}
-				else{
+				else{ //Close corresponding collapsible if the current element is already open
 					event.target.className=currentClass.substring(0,currentClass.search("open")-1);
 				}
 			}
-			function accordion() {
+			function accordion() { //Function to make the accordion from the above HTML
 				var dimensions=calculateRows();
 				var accordionWrapper=document.getElementById("accordionWrapper");
 				document.body.appendChild(accordionWrapper);
 				var headers=document.getElementsByClassName("accHeader");
-				for (var i = 0; i < dimensions[0]; i++) {
+				for (var i = 0; i < dimensions[0]; i++) { //Creates just the rows
 					var row=document.createElement("div");
 					row.className="row";
 					accordionWrapper.appendChild(row);
 					var collapsible=document.createElement("div");
 					collapsible.className="row collapsible";
-					collapsible.id=String("Collapsible"+String(i+1))
+					collapsible.id=String("Collapsible"+String(i+1)) //Individual ID for each collapsible
 					collapsible.style.display="block";
 					accordionWrapper.appendChild(collapsible);
 					for (var j = 0; j < 4; j++) {
 						var elementWrapper=document.createElement("div");
-						elementWrapper.className="col-sm-3";
+						elementWrapper.className="col-sm-3"; //Using bootstrap for alignment of the elements
 						row.appendChild(elementWrapper);
 						var element=document.createElement("div");
 						element.className="col-sm-12";
-						element.id="Element"+String(i*4+j);
+						element.id="Element"+String(i*4+j); //Individual ID for each element
 						elementWrapper.appendChild(element);
 						var header=document.createTextNode(headers[(i*4)+j].innerHTML.toUpperCase());
 						element.appendChild(header);
 						element.style.fontWeight="bold";
-						element.addEventListener('click',toggleItem, false);
+						element.addEventListener('click',toggleItem, false); //Event listner for toggleItem
 					}
 				}
-				if (dimensions[1]>0) {
+				if (dimensions[1]>0) { //Creates the extras
 					var row=document.createElement("div");
 					row.className="row";
 					accordionWrapper.appendChild(row);
