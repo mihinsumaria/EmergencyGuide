@@ -8,6 +8,7 @@ Open 'Emergency.html' in a browser that has the latest JS engine, preferably Chr
 No other dependencies.
 The code is documented for your understanding.
 Feel free to test the code by adding more accordion elements similar to 'Test' and 'Test1'.
+The live version of this code preview is available [here](https://mihinsumaria.github.io/EmergencyGuide/Emergency.html)
 
 ### Who do I talk to? ###
 For any questions send an email at mssumaria@wpi.edu 
